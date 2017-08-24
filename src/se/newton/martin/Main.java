@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Uppgift 1: Behåll endast en decimal av inläst tal.
         System.out.print("Ange ett decimaltal? ");
 
         Scanner sc = new Scanner(System.in);
@@ -16,6 +17,7 @@ public class Main {
 
         System.out.println(oneDecimal);
 
+        //Uppgift2: Summera individuella siffrorna i inläst tal. 123 -> 6
         System.out.print("Ange ett tal mellan 1-999?");
         int tal = sc.nextInt();
 
@@ -27,6 +29,7 @@ public class Main {
 
         System.out.println(firstDigit + secondDigit + thirdDigit);
 
+        //Uppgift3: Beräkna BMI
         System.out.print("Ange din längd: ");
 
         double length = sc.nextDouble();
@@ -38,7 +41,5 @@ public class Main {
         double BMI = weight / (length * length);
 
         System.out.println(BMI);
-
-//        double fahrenheit = celsius * 1.8 + 32;
     }
 }
