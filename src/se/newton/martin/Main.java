@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
         //Uppgift 1: Behåll endast en decimal av inläst tal.
         System.out.print("Ange ett decimaltal? ");
 
