@@ -1,5 +1,6 @@
 package se.newton.martin;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main2 {
@@ -9,13 +10,11 @@ public class Main2 {
         int secretNumber = (int) (Math.random() * 50) + 1;
         int yourGuess = 0;
 
-        Scanner sc = new Scanner(System.in);
-
         //for( int i = 1; yourGuess != secretNumber; i++) {
         int i = 1;
         while (yourGuess != secretNumber) {
             System.out.println("Välj ett tal mellan 1-50");
-            yourGuess = sc.nextInt();
+            yourGuess = readANumber();
 
             if (yourGuess == secretNumber)
                 System.out.println("Grattis, du gissade rätt på " + i + " försök!");
@@ -47,7 +46,17 @@ public class Main2 {
 
     public static int readANumber() {
         Scanner sc = new Scanner(System.in);
-        int temp = sc.nextInt();
+        int temp = 0;
+        boolean validinput = false;
+        do {
+           try {
+                temp = sc.nextInt();
+                validinput = true;
+           } catch (InputMismatchException e) {
+                //Hantera eventuellt fel här
+                sc.next();
+           }
+        }while(!validinput);
         return temp;
     }
 
@@ -60,7 +69,7 @@ public class Main2 {
 
             switch (readANumber()) {
                 case 0:
-                    return;
+                    return;  //Lämnar main metoden och därmed avslutas applikationen.
                 case 1:
                     gissatalet();
                     break;
@@ -70,7 +79,6 @@ public class Main2 {
                 default:
                     System.out.println("Ej giltigt val");
             }
-
         }
     }
 }
