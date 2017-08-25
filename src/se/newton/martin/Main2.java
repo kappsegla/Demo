@@ -1,5 +1,6 @@
 package se.newton.martin;
 
+import java.net.Inet4Address;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -49,14 +50,14 @@ public class Main2 {
         int temp = 0;
         boolean validinput = false;
         do {
-           try {
+            try {
                 temp = sc.nextInt();
                 validinput = true;
-           } catch (InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 //Hantera eventuellt fel här
                 sc.next();
-           }
-        }while(!validinput);
+            }
+        } while (!validinput);
         return temp;
     }
 
@@ -65,6 +66,7 @@ public class Main2 {
         while (true) {
             System.out.println("1. Gissa talet");
             System.out.println("2. Utskrift med loopar");
+            System.out.println("3. Många nummer");
             System.out.println("0. Avsluta");
 
             switch (readANumber()) {
@@ -76,9 +78,50 @@ public class Main2 {
                 case 2:
                     utskriftermedloop();
                     break;
+                case 3:
+                    månganummer();
+                    break;
                 default:
                     System.out.println("Ej giltigt val");
             }
         }
+    }
+
+    private static void månganummer() {
+
+        int[] numbers = new int[10];
+
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Skriv en siffra:");
+            numbers[i] = readANumber();
+        }
+
+        int summa =0;
+        int max = Integer.MIN_VALUE;
+        int nextmax = Integer.MIN_VALUE;
+
+        //int max = Integer.MIN_VALUE;
+        int min = numbers[0];
+
+        for (int i = 0; i < 10; i++) {
+            summa = summa + numbers[i]; //summa +=numbers[i]; fungerar också som kortare version.
+            if( numbers[i] > max ) {
+                nextmax = max;
+                max = numbers[i];
+            }
+            else if(numbers[i] > nextmax)
+            {
+                nextmax = numbers[i];
+            }
+
+            if( numbers[i] < min )
+                min = numbers[i];
+        }
+
+        System.out.println("Medelvärde: " + summa / 10.0);
+        System.out.println("Max: " + max);
+        System.out.println("Näst störst: " + nextmax);
+        System.out.println("Min: " + min);
     }
 }
