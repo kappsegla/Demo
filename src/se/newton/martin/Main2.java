@@ -89,37 +89,37 @@ public class Main2 {
 
     private static void månganummer() {
 
-        int[] numbers = new int[10];
+        System.out.println("Hur många siffror vill du läsa in?");
+        int numberCount = readANumber();
 
+        int[] numbers= new int[numberCount];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < numberCount; i++) {
             System.out.println("Skriv en siffra:");
             numbers[i] = readANumber();
         }
 
-        int summa =0;
+        int summa = 0;
         int max = Integer.MIN_VALUE;
         int nextmax = Integer.MIN_VALUE;
 
         //int max = Integer.MIN_VALUE;
         int min = numbers[0];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < numberCount; i++) {
             summa = summa + numbers[i]; //summa +=numbers[i]; fungerar också som kortare version.
-            if( numbers[i] > max ) {
+            if (numbers[i] > max) {
                 nextmax = max;
                 max = numbers[i];
-            }
-            else if(numbers[i] > nextmax)
-            {
+            } else if (numbers[i] > nextmax) {
                 nextmax = numbers[i];
             }
 
-            if( numbers[i] < min )
+            if (numbers[i] < min)
                 min = numbers[i];
         }
 
-        System.out.println("Medelvärde: " + summa / 10.0);
+        System.out.println("Medelvärde: " + 1.0 * summa / numberCount);
         System.out.println("Max: " + max);
         System.out.println("Näst störst: " + nextmax);
         System.out.println("Min: " + min);
