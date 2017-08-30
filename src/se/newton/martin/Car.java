@@ -1,5 +1,8 @@
 package se.newton.martin;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Car {
     private int weight;
     private int seats;
@@ -17,7 +20,6 @@ public class Car {
     }
 
 
-
     //Setter method for weight in kg
     public void setWeight(int weight) {
         if (weight > 0 && weight <= 3500)
@@ -32,7 +34,14 @@ public class Car {
     public void setSeats(int seats) {
         if (seats > 0 && seats <= 9 && this.seats != seats) {
             this.seats = seats;
+
+            seatOccupation = Arrays.copyOf(seatOccupation,this.seats);
+            //copyOf array with our code...
+            /*boolean[] oldSeatsArray = seatOccupation;
             seatOccupation = new boolean[this.seats];
+            for (int i = 0; i < oldSeatsArray.length && i < seatOccupation.length; i++) {
+                seatOccupation[i] = oldSeatsArray[i];
+            }*/
         }
     }
 
@@ -59,4 +68,5 @@ public class Car {
     public double getRange() {
         return fuelAmount / mpg;
     }
+
 }
