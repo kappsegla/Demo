@@ -5,11 +5,18 @@ public class Car {
     private int seats;
     private Person owner;
 
-    //Default Constructor
     public Car(int seats, int weight, Person owner) {
         this.seats = seats;
         this.weight = weight;
         this.setOwner(owner);
+    }
+
+    //Copy Constructor
+    public Car(Car car)
+    {
+        this.weight = car.weight;
+        this.seats = car.seats;
+        this.owner = car.owner;
     }
 
     //Setter method for weight in kg

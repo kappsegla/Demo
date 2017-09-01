@@ -4,8 +4,7 @@ import java.net.Inet4Address;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main2 {
-
+public class GissaTalet {
 
     public static void gissatalet() {
         int secretNumber = (int) (Math.random() * 50) + 1;
