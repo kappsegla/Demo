@@ -2,8 +2,12 @@ package se.newton.martin;
 
 public class PointsManager {
     public static void main(String[] args){
-        Point point1 = new Point(3,4);
+
+        final Point point1 = new Point(3,4);
+
         Point point2 = new Point(0,0);
+
+        point1 = point2;
 
         //Copy constructor
         Point point3 = new Point(point1);
@@ -20,7 +24,6 @@ public class PointsManager {
         point1.setX(2);
 
         System.out.println("Line length: " + line.length());
-
 
 
         /*

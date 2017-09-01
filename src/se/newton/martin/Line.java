@@ -10,7 +10,17 @@ public class Line {
         this.point2 = point2.clonePoint();
     }
 
+    public Line(Line line)
+    {
+        this.point1 = point1.clonePoint();
+        this.point2 = point2.clonePoint();
+    }
+
     public double length() {
         return point1.distanceTo(point2);
+    }
+
+    public Line cloneLine() {
+        return new Line(this);
     }
 }
