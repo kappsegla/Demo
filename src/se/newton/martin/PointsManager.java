@@ -1,13 +1,20 @@
 package se.newton.martin;
 
+import java.util.Scanner;
+
 public class PointsManager {
     public static void main(String[] args){
 
-        final Point point1 = new Point(3,4);
+        Point point1 = new Point(3,4);
 
-        Point point2 = new Point(0,0);
+        Point point2 = new Point(3,4);
 
-        point1 = point2;
+        //Jämförelse mellan objekt. == fungerar ej då det jämför endast referensens adress.
+        if( point1.equals(point2))
+        {
+            System.out.println("Lika som bär");
+        }
+
 
         //Copy constructor
         Point point3 = new Point(point1);

@@ -14,6 +14,7 @@ public class Point {
         this.setY(y);
 
     }
+
     //Copy Constructor
     public Point(Point point) {
         copyData(point, this);
@@ -21,7 +22,7 @@ public class Point {
 //        this.y = point.y;
     }
 
-    public Point(int[] coords){
+    public Point(int[] coords) {
         this.setX(coords[0]);
         this.setY(coords[1]);
     }
@@ -43,8 +44,7 @@ public class Point {
 //        point.y = this.y;
     }
 
-    private void copyData(Point from, Point to)
-    {
+    private void copyData(Point from, Point to) {
         to.setX(from.getX());
         to.setY(from.getY());
     }
@@ -63,6 +63,17 @@ public class Point {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public boolean compareTo(Point other) {
+        return this.x == other.x && this.y == other.y;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Point other = (Point) obj;
+
+        return this.x == other.x && this.y == other.y;
     }
 }
 
