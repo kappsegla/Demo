@@ -7,6 +7,10 @@ public class Circle {
         System.out.println("Circle Constructor running");
     }
 
+    public Circle(float r) {
+        radius = r;
+        System.out.println("Circle with float arg Constructor running");
+    }
     public double getArea() {
         return radius * radius * Math.PI;
     }

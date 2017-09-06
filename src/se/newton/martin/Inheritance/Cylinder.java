@@ -6,6 +6,7 @@ public class Cylinder extends Circle {
     public float height;
 
     public Cylinder() {
+        super(1.0f);  //Anrop till basklassens konstruktor. Default super()
         System.out.println("Cylinder Constructor running");
     }
 
