@@ -2,14 +2,13 @@ package se.newton.martin.animalgame;
 
 public class Cat extends Mammal{
 
-    public Cat()
+    public Cat(boolean hungry)
     {
-        setHungry(true);
+        super(hungry);
     }
 
     @Override
     public void talk() {
-        super.talk();
         System.out.println("Mjau");
     }
 }

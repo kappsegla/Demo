@@ -3,9 +3,12 @@ package se.newton.martin.animalgame;
 public class Mammal {
     private boolean hungry;
 
+    public Mammal(boolean hungry)
+    {
+        this.hungry = hungry;
+    }
+
     public void talk(){
-        if(isHungry())
-            System.out.print("Hungrig ");
     }
 
     public boolean isHungry() {
