@@ -15,20 +15,29 @@ public class AnimalGame {
 
         for (int i = 0; i < animals.size() ; i++) {
             animals.get(i).talk();
+            if( animals.get(i).isHungry()) {
+                animals.get(i).feed();
+                animals.get(i).talk();
+            }
         }
-
-
-
-
-
-        /*
-        Mammal cat = new Cat();
-        cat.talk();
-
-        Mammal dog = new Dog();
-        dog.talk();*/
-
-
-
     }
+
+    public static ArrayList<Mammal> initialize()
+    {
+        //initiera ett slumpmässigt antal djur till en arraylist
+        //Slumpa vilka olika djur som ska skapas
+        //Slupma om djuret från början ska vara hungrigt eller inte
+    }
+
+    private static void takeTurn(ArrayList<Mammal> animals)
+    {
+        //Anropa alla djurs talk()
+        //Låt djuren även meddela om de är hungriga
+        //Be användaren trycka enter för att mata djuren
+        //Mata alla djuren
+        //Slumpa vilka djur som ska vara hungriga
+    }
+
+
+
 }
