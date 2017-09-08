@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Rectangle {
+public class Rectangle{
     private Color _color;
     private int _width;
     private int _height;
@@ -23,4 +23,5 @@ public class Rectangle {
     public int calculateArea() {
         return _width * _height;
     }
+
 }

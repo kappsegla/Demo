@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class AnimalGame {
-
     //Create a static random objekt for use in all methods.
     private static Random random = new Random();
 
@@ -55,6 +54,12 @@ public class AnimalGame {
         for (int i = 0; i < animals.size(); i++) {
             //Anropa alla djurs talk()
             animals.get(i).talk();
+
+            if( animals.get(i) instanceof IPet) {
+               IPet p = (IPet)animals.get(i);
+               System.out.println("Are you cute?" + p.isCute());
+            }
+
             //Låt djuren även meddela om de är hungriga
             if (animals.get(i).isHungry()) {
                 System.out.println("  - Is hungry!");

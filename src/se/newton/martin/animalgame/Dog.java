@@ -1,6 +1,6 @@
 package se.newton.martin.animalgame;
 
-public class Dog extends Mammal {
+public class Dog extends Mammal implements IPet{
     public Dog(boolean hungry)
     {
         super(hungry);
@@ -8,5 +8,10 @@ public class Dog extends Mammal {
     @Override
     public void talk() {
        System.out.println("Voff");
+    }
+
+    @Override
+    public boolean isCute() {
+        return false;
     }
 }

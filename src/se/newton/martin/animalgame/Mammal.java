@@ -1,6 +1,6 @@
 package se.newton.martin.animalgame;
 
-public class Mammal {
+public abstract class Mammal {
     private boolean hungry;
 
     public Mammal(boolean hungry)
@@ -8,8 +8,7 @@ public class Mammal {
         this.hungry = hungry;
     }
 
-    public void talk(){
-    }
+    public abstract void talk();
 
     public boolean isHungry() {
         return hungry;
@@ -22,3 +21,4 @@ public class Mammal {
         setHungry(false);
     }
 }
+
