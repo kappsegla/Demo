@@ -1,4 +1,4 @@
-package se.newton.martin.Ovning3OOP;
+package se.newton.martin.ovning3.shapes;
 
 public abstract class Shape {
     private double length;
