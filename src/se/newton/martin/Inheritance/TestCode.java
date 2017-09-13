@@ -1,4 +1,4 @@
-package se.newton.martin.Inheritance;
+package se.newton.martin.inheritance;
 
 public class TestCode {
     public static void main(String[] args) {

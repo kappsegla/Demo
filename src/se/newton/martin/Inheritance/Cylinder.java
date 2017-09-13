@@ -1,6 +1,4 @@
-package se.newton.martin.Inheritance;
-
-import java.util.Currency;
+package se.newton.martin.inheritance;
 
 public class Cylinder extends Circle {
     public float height;

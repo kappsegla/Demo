@@ -1,4 +1,4 @@
-package se.newton.martin.Ovning2;
+package se.newton.martin.ovning2;
 
 public class Hus {
     private int floors;

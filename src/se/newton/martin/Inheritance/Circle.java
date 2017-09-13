@@ -1,4 +1,4 @@
-package se.newton.martin.Inheritance;
+package se.newton.martin.inheritance;
 
 public class Circle {
     public float radius;
