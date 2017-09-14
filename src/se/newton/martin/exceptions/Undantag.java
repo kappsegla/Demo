@@ -12,6 +12,8 @@ public class Undantag {
         if(value == 0)
             throw new MyException(value);
         int i = 3 / value;
+
+
     }
 
     public static void main(String[] args) {
