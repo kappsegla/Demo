@@ -1,15 +1,21 @@
 package se.newton.martin.threads;
 
-public class Workers implements Runnable {
+public class Worker implements Runnable {
         @Override
         public void run() {
 
         }
 
         public static void main(String[] args) throws InterruptedException {
-            Program p = new Program();
+
+
+
+
+
+            Worker p = new Worker();
             Thread thread = new Thread(p);
             thread.start();
+
 
         }
     }
