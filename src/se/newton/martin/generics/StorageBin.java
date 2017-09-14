@@ -3,6 +3,8 @@ package se.newton.martin.generics;
 import se.newton.martin.animalgame.IPet;
 import se.newton.martin.animalgame.Mammal;
 
+import java.util.ArrayList;
+
 public class StorageBin<T extends Number> {
     private T storage;
 
