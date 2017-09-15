@@ -5,6 +5,7 @@ import se.newton.martin.ovning3.shapes.Shape;
 
 public class Program {
 
+
     /**
      * Javadoc comment. This is a generic method that can take any reference as input.
      * Type is decided at compiletime.
@@ -12,7 +13,7 @@ public class Program {
      * @param arg
      * @param <T>
      */
-    public static <T> void genericMethod(T arg) {
+     public static <T> void genericMethod(T arg) {
         System.out.println(arg);
     }
 
@@ -31,10 +32,10 @@ public class Program {
         });
         consumer1.start();
 
-        Thread consumer2 = new Thread(() -> {
-            while (true) {
-                System.out.println("Consumer2 says:" + q.deQueue());
-            }
+        Thread consumer2 = new Thread( () -> {
+                while (true) {
+                    System.out.println("Consumer2 says:" + q.deQueue());
+                }
         });
         consumer2.start();
 

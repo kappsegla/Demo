@@ -39,8 +39,15 @@ public class Program {
 
         System.out.println("---------");
 
-       // listOfShapes.sort(new OrderShapesByAreaComparator());
-        listOfShapes.sort(new OrderShapesByPerimeterComparator());
+        // listOfShapes.sort(new OrderShapesByAreaComparator());
+        // listOfShapes.sort(new OrderShapesByPerimeterComparator());
+        listOfShapes.sort((o1, o2) -> {
+            if (o1.getArea() < o2.getArea())
+                return -1;
+            if (o1.getArea() > o2.getArea())
+                return 1;
+            return 0;
+        });
 
         for (Shape shape : listOfShapes) {
             ViewShapeInfo(shape);
