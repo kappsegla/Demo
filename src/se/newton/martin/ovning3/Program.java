@@ -1,6 +1,7 @@
 package se.newton.martin.ovning3;
 
 
+import se.newton.martin.ovning3.comparators.OrderShapesByAreaComparator;
 import se.newton.martin.ovning3.comparators.OrderShapesByPerimeterComparator;
 import se.newton.martin.ovning3.shapes.Rectangle;
 import se.newton.martin.ovning3.shapes.ResizeableRectangle;
@@ -39,12 +40,14 @@ public class Program {
 
         System.out.println("---------");
 
-        // listOfShapes.sort(new OrderShapesByAreaComparator());
+        //Sortera listan med comparator
+        //listOfShapes.sort(new OrderShapesByAreaComparator());
         // listOfShapes.sort(new OrderShapesByPerimeterComparator());
-        listOfShapes.sort((o1, o2) -> {
+        //Same thing but with lambda expression
+        listOfShapes.sort((o1, o2)->{
             if (o1.getArea() < o2.getArea())
                 return -1;
-            if (o1.getArea() > o2.getArea())
+            if(o1.getArea() > o2.getArea())
                 return 1;
             return 0;
         });

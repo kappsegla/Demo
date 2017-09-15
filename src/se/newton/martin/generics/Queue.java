@@ -1,11 +1,13 @@
 package se.newton.martin.generics;
 
-public class Queue {
-    private int[] value = new int[100];
+public class Queue<T> {
+    //Vi får inte skapa objekt av typen T i java generics. Använd Object istället
+    //och typecasta (T) vid behov. Se deQueue metoden.
+    private Object[] value = new Object[100];
     private int lastposition = 0;
     private int firstposition = 0;
 
-    public synchronized void enQueue(int value){
+    public synchronized void enQueue(T value){
         this.value[lastposition] = value;
         lastposition++;
         notify();
@@ -14,7 +16,7 @@ public class Queue {
             lastposition = 0;
     }
 
-    public synchronized int deQueue(){
+    public synchronized T deQueue(){
         while( isEmpty())
         {
             //Finns inget att läsa ut. Kön är tom.
@@ -26,7 +28,7 @@ public class Queue {
             }
         }
 
-        int value = this.value[firstposition];
+        T value = (T)this.value[firstposition];
         firstposition++;
 
         if(firstposition > this.value.length - 1)

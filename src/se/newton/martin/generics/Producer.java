@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Producer implements Runnable {
 
-    private Queue q;
+    private Queue<String> q;
 
-    public Producer(Queue q) {
+    public Producer(Queue<String> q) {
         this.q = q;
     }
 
@@ -15,7 +15,7 @@ public class Producer implements Runnable {
         Random random = new Random();
 
         while (true) {
-            q.enQueue(random.nextInt());
+            q.enQueue("" + random.nextInt());
             try {
                 Thread.sleep(random.nextInt(10)*1000);
             } catch (InterruptedException e) {

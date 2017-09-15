@@ -18,7 +18,7 @@ public class Program {
     }
 
     public static void main(String[] args) {
-        Queue q = new Queue();
+        Queue<String> q = new Queue();
         Thread producer = new Thread(new Producer(q));
         producer.start();
 
