@@ -1,7 +1,5 @@
 package se.newton.martin.generics;
 
-import se.newton.martin.ovning3.shapes.Rectangle;
-import se.newton.martin.ovning3.shapes.Shape;
 
 public class Program {
 
@@ -23,7 +21,7 @@ public class Program {
         producer.start();
 
         Thread consumer1 = new Thread(new Runnable() {
-            @Override
+                @Override
             public void run() {
                 while (true) {
                     System.out.println("Consumer1 says:" + q.deQueue());
@@ -51,10 +49,6 @@ public class Program {
 //        StorageBin<Integer> placeToStoreThings = new StorageBin<>();
 //        placeToStoreThings.setStorage(10);
 //        placeToStoreThings.add(20);
-//
-//        genericMethod("Test");
-//        genericMethod(345);
-//        genericMethod(new Rectangle(10,10));
 
     }
 }

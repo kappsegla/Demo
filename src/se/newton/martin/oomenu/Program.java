@@ -11,11 +11,11 @@ public class Program {
         menu.add("Alternativ 1", () -> System.out.println("Du valde alternativ 1" + menu.textalternativ.size()));
         menu.add("Alternativ 2", () -> System.out.println("Du valde alternativ 2"));
         menu.add("Alternativ 3", new MenuOption() {
-            @Override
-            public void execute() {
-                System.out.println("Du valde alternativ 3");
-            }
-        });
+        @Override
+        public void execute() {
+            System.out.println("Du valde alternativ 3");
+        }
+    });
         menu.add("Alternativ 4", new Alt4MEnuOption());
         menu.add("Alternativ 5", this::alt5);
         menu.add("Alternativ 6", Program::alt6static);

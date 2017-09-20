@@ -17,7 +17,6 @@ public class Menu {
         for (int i = 0; i < textalternativ.size(); i++) {
             System.out.println(i + 1 + ". " + textalternativ.get(i));
         }
-
     }
 
     public int val() {
