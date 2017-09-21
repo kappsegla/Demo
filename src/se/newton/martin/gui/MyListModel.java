@@ -30,10 +30,10 @@ public class MyListModel implements ListModel<String> {
         listener.remove(l);
     }
 
-    public void update(int i, String text) {
-        listItems.set(i, text);
+    public void update(int index, String text) {
+        listItems.set(index, text);
         for (ListDataListener l : listener ) {
-            l.contentsChanged(new ListDataEvent(this,ListDataEvent.CONTENTS_CHANGED,i,i));
+            l.contentsChanged(new ListDataEvent(this,ListDataEvent.CONTENTS_CHANGED,index,index));
         }
     }
 
@@ -41,6 +41,13 @@ public class MyListModel implements ListModel<String> {
         listItems.add(text);
         for (ListDataListener l : listener ) {
             l.intervalAdded(new ListDataEvent(this,ListDataEvent.INTERVAL_ADDED,listItems.size()-1,listItems.size()-1));
+        }
+    }
+
+    public void remove(int index){
+        listItems.remove(index);
+        for (ListDataListener l : listener ) {
+            l.intervalRemoved(new ListDataEvent(this,ListDataEvent.INTERVAL_REMOVED,index, index));
         }
     }
 }
