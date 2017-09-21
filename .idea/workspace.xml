@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52f0d997-483d-4e0b-a37a-7bf48c963b6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Demo/se/newton/martin/gui/textstrings.properties" afterPath="$PROJECT_DIR$/out/production/Demo/se/newton/martin/gui/textstrings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Demo/se/newton/martin/gui/textstrings_en.properties" afterPath="$PROJECT_DIR$/out/production/Demo/se/newton/martin/gui/textstrings_en.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,13 +36,13 @@
         <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#876#877#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
+                <element signature="e#1628#1629#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
-        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
+        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
       </list>
     </option>
   </component>
@@ -835,13 +828,13 @@
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
           </folding>
         </state>
       </provider>

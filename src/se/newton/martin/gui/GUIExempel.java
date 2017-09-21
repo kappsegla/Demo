@@ -6,6 +6,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class GUIExempel {
     private JPanel root;
@@ -15,8 +16,33 @@ public class GUIExempel {
     private JButton taBortButton;
     private JList list1;
     private MyListModel myListModel;
+    private JMenuBar menuBar;
+    private static JFrame frame;
 
     public GUIExempel() {
+        menuBar = new JMenuBar();
+        frame.setJMenuBar(menuBar);
+        JMenu menu = new JMenu("Meny");
+        menu.setMnemonic('M');
+        menuBar.add(menu);
+
+
+        //Keyevent is used for navigating with alt + underscored character in windows
+        JMenuItem menuItem = new JMenuItem("A text-only menu item",
+                KeyEvent.VK_T);
+
+
+        menuItem.setAccelerator(KeyStroke.getKeyStroke(
+                KeyEvent.VK_1, ActionEvent.ALT_MASK));
+
+        menuItem.getAccessibleContext().setAccessibleDescription(
+                "This doesn't really do anything");
+        menu.add(menuItem);
+
+        menuItem.addActionListener( (e) -> {
+            myListModel.add(textField1.getText());
+        });
+
         myListModel = new MyListModel();
         list1.setModel(myListModel);
         list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -49,7 +75,7 @@ public class GUIExempel {
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
-            JFrame frame = new JFrame("GUIExempel");
+            frame = new JFrame("GUIExempel");
             frame.setContentPane(new GUIExempel().root);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(new Dimension(800,600));
