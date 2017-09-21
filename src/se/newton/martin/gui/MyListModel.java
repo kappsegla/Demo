@@ -6,17 +6,18 @@ import javax.swing.event.ListDataListener;
 import java.util.ArrayList;
 
 public class MyListModel implements ListModel<String> {
-    String[] listItems = {"Item1", "Item2", "Item3", "Lisa", "Pelle", "Martin"};
+
+    ArrayList<String> listItems = new ArrayList<>();
     ArrayList<ListDataListener> listener = new ArrayList<>();
 
     @Override
     public int getSize() {
-        return listItems.length;
+        return listItems.size();
     }
 
     @Override
     public String getElementAt(int index) {
-        return listItems[index];
+        return listItems.get(index);
     }
 
     @Override
@@ -30,12 +31,17 @@ public class MyListModel implements ListModel<String> {
     }
 
     public void update(int i, String text) {
-        listItems[i] = text;
+        listItems.set(i, text);
         for (ListDataListener l : listener ) {
             l.contentsChanged(new ListDataEvent(this,ListDataEvent.CONTENTS_CHANGED,i,i));
         }
+    }
 
-
+    public void add(String text) {
+        listItems.add(text);
+        for (ListDataListener l : listener ) {
+            l.intervalAdded(new ListDataEvent(this,ListDataEvent.INTERVAL_ADDED,listItems.size()-1,listItems.size()-1));
+        }
     }
 }
 

@@ -79,6 +79,13 @@ public class GUIProgram extends JFrame {
 
     public static void main(String[] args) {
 
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
+
         EventQueue.invokeLater(() -> {
             GUIProgram program = new GUIProgram();
             program.setSize(800, 600);
