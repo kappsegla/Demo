@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52f0d997-483d-4e0b-a37a-7bf48c963b6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/smiley.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo.iml" afterPath="$PROJECT_DIR$/Demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/MainTest.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIProgram.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIProgram.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +24,7 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/newton/martin/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
+            <state relative-caret-position="231">
               <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -43,7 +36,7 @@
       <file leaf-file-name="GUIHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
+            <state relative-caret-position="231">
               <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -55,20 +48,25 @@
       <file leaf-file-name="GUIExempel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
-              <caret line="142" column="48" lean-forward="true" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+            <state relative-caret-position="541">
+              <caret line="119" column="46" lean-forward="true" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GUIExempel#0;class#GUIExempel#0" expanded="false" />
+                <element signature="e#3688#3758#0" expanded="false" />
+                <element signature="e#4334#4369#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIExempel.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
+      <file leaf-file-name="MyListModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="965">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -137,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/se/newton/martin/oomenu/Program.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/generics/Program.java" />
         <option value="$PROJECT_DIR$/Resource_en.properties" />
-        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties" />
         <option value="$PROJECT_DIR$/src/sdfd.java" />
@@ -146,6 +143,7 @@
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIProgram.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
+        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
       </list>
     </option>
@@ -800,13 +798,6 @@
     <entry file="file://$PROJECT_DIR$/Test.properties" />
     <entry file="file://$PROJECT_DIR$/Test.xml" />
     <entry file="file://$PROJECT_DIR$/Resources.properties" />
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
@@ -846,16 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIProgram.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2371">
@@ -874,9 +855,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="965">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
+        <state relative-caret-position="231">
           <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -884,18 +878,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="844">
-          <caret line="142" column="48" lean-forward="true" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+        <state relative-caret-position="541">
+          <caret line="119" column="46" lean-forward="true" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#GUIExempel#0;class#GUIExempel#0" expanded="false" />
+            <element signature="e#3688#3758#0" expanded="false" />
+            <element signature="e#4334#4369#0" expanded="false" />
           </folding>
         </state>
       </provider>

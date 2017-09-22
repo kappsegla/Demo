@@ -50,5 +50,13 @@ public class MyListModel implements ListModel<String> {
             l.intervalRemoved(new ListDataEvent(this,ListDataEvent.INTERVAL_REMOVED,index, index));
         }
     }
+
+    public void clear() {
+        int size = listItems.size();
+        listItems.clear();
+        for (ListDataListener l : listener ) {
+            l.intervalRemoved(new ListDataEvent(this,ListDataEvent.INTERVAL_REMOVED,0, size));
+        }
+    }
 }
 

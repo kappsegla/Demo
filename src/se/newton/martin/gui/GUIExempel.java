@@ -106,32 +106,25 @@ public class GUIExempel {
             //Kan även göras med SwingWorker
             // https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html
             new Thread(() -> {
-
-                try {
-                    PrintWriter outputStream = new PrintWriter(new FileWriter( "characteroutput.txt"));
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-
-
-
                 //Läs in filen
                 BufferedReader inputStream = null;
-                StringBuilder stringBuilder = new StringBuilder();
+                //StringBuilder stringBuilder = new StringBuilder();
                 try {
                     inputStream = new BufferedReader(new FileReader(file));
 
                     String temp;
+                    myListModel.clear();
                     while( (temp = inputStream.readLine()) != null ) {
-                        stringBuilder.append(temp);
-                        stringBuilder.append('\n');
+                  //      stringBuilder.append(temp);
+                  //      stringBuilder.append('\n');
+                        myListModel.add(temp);
                     }
 
                     //Uppdatera GUI, på EDT tråden.
-                    EventQueue.invokeLater(() -> {
-                        //Kod för att uppdatera grafiska gränssnittet
-                        textArea1.setText(stringBuilder.toString());
-                    });
+//                    EventQueue.invokeLater(() -> {
+//                        //Kod för att uppdatera grafiska gränssnittet
+//                        textArea1.setText(stringBuilder.toString());
+//                    });
                 } catch (FileNotFoundException e1) {
                     e1.printStackTrace();
                 } catch (IOException e1) {
@@ -156,6 +149,21 @@ public class GUIExempel {
 
         //In response to a button click:
         int returnVal = fc.showSaveDialog(null);
+
+        if( returnVal == JFileChooser.APPROVE_OPTION){
+            new Thread(()-> {
+                File file = fc.getSelectedFile();
+                try {
+                    PrintWriter outputStream = new PrintWriter(new FileWriter(file));
+                    for (int i = 0; i < myListModel.getSize(); i++) {
+                        outputStream.println(myListModel.getElementAt(i));
+                    }
+                    outputStream.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }).start();
+        }
     }
 
     public static void main(String[] args) {
