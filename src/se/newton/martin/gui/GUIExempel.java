@@ -7,16 +7,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.io.File;
+import java.io.*;
 import java.util.ResourceBundle;
 
 public class GUIExempel {
     private JPanel root;
     private JTextField textField1;
-    private JTextField textField2;
     private JButton läggTillButton;
     private JButton taBortButton;
     private JList list1;
+    private JLabel label2;
+    private JTextArea textArea1;
     private MyListModel myListModel;
     private JMenuBar menuBar;
     private static JFrame frame;
@@ -57,6 +58,12 @@ public class GUIExempel {
     }
 
     private void createMenuBar() {
+        //Load image as icon, should be done in thread...
+        ImageIcon icon = GUIHelper.createImageIcon("/smiley.gif",
+                "a pretty but meaningless splat");
+           label2.setIcon(icon);
+        //label2.setIcon(new MissingIcon());
+
         menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
         JMenu menu = new JMenu("File");
@@ -99,17 +106,46 @@ public class GUIExempel {
             //Kan även göras med SwingWorker
             // https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html
             new Thread(() -> {
-                //Läs in filen
+
                 try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e1) {
+                    PrintWriter outputStream = new PrintWriter(new FileWriter( "characteroutput.txt"));
+                } catch (IOException e1) {
                     e1.printStackTrace();
                 }
-                //Uppdatera GUI, på EDT tråden.
-                EventQueue.invokeLater(() -> {
-                    //Kod för att uppdatera grafiska gränssnittet
-                    textField2.setText(file.getName());
-                });
+
+
+
+                //Läs in filen
+                BufferedReader inputStream = null;
+                StringBuilder stringBuilder = new StringBuilder();
+                try {
+                    inputStream = new BufferedReader(new FileReader(file));
+
+                    String temp;
+                    while( (temp = inputStream.readLine()) != null ) {
+                        stringBuilder.append(temp);
+                        stringBuilder.append('\n');
+                    }
+
+                    //Uppdatera GUI, på EDT tråden.
+                    EventQueue.invokeLater(() -> {
+                        //Kod för att uppdatera grafiska gränssnittet
+                        textArea1.setText(stringBuilder.toString());
+                    });
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                finally {
+                    if( inputStream != null) {
+                        try {
+                            inputStream.close();
+                        } catch (IOException e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                }
             }).start();
         }
     }
@@ -128,6 +164,7 @@ public class GUIExempel {
             frame.setContentPane(new GUIExempel().root);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(new Dimension(800, 600));
+            frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         });
     }

@@ -63,23 +63,12 @@
                         </constraints>
                         <properties/>
                       </component>
-                      <component id="774b4" class="javax.swing.JLabel">
+                      <component id="774b4" class="javax.swing.JLabel" binding="label2">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                         </constraints>
                         <properties>
                           <text value="Label"/>
-                        </properties>
-                      </component>
-                      <component id="f0e59" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-                        <constraints>
-                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                            <preferred-size width="150" height="-1"/>
-                            <maximum-size width="200" height="-1"/>
-                          </grid>
-                        </constraints>
-                        <properties>
-                          <enabled value="false"/>
                         </properties>
                       </component>
                       <component id="343c4" class="javax.swing.JButton" binding="läggTillButton" default-binding="true">
@@ -105,6 +94,14 @@
                           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                         </constraints>
                       </vspacer>
+                      <component id="4af5c" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                      </component>
                     </children>
                   </grid>
                 </children>

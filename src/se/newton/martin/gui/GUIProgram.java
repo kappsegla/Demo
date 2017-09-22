@@ -79,12 +79,12 @@ public class GUIProgram extends JFrame {
 
     public static void main(String[] args) {
 
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        });
+//        EventQueue.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//            }
+//        });
 
         EventQueue.invokeLater(() -> {
             GUIProgram program = new GUIProgram();
