@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52f0d997-483d-4e0b-a37a-7bf48c963b6b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/JLabelAdvanced.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo.iml" afterPath="$PROJECT_DIR$/Demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,57 +25,7 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/se/newton/martin/MainTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIExempel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="119" column="46" lean-forward="true" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#GUIExempel#0;class#GUIExempel#0" expanded="false" />
-                <element signature="e#3688#3758#0" expanded="false" />
-                <element signature="e#4334#4369#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyListModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="965">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -94,7 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/animalgame/IPet.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/animalgame/Dog.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/animalgame/AnimalGame.java" />
@@ -138,19 +92,20 @@
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties" />
         <option value="$PROJECT_DIR$/src/sdfd.java" />
-        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIProgram.java" />
-        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
+        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java" />
+        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
+        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
+        <option value="$PROJECT_DIR$/src/se/newton/martin/gui/JLabelAdvanced.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="83" />
-    <option name="y" value="134" />
+    <option name="x" value="157" />
+    <option name="y" value="109" />
     <option name="width" value="1734" />
     <option name="height" value="792" />
   </component>
@@ -208,19 +163,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Demo" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Demo" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,7 +199,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="martin" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="GUIExempel" type="e9f4de52:FormNode" />
+              <item name="Resource Bundle 'textstrings'" type="a6c14932:ResourceBundleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Demo" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Demo" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -274,17 +229,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="292" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="449" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="396" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="se.newton.martin" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="se.newton.martin.oomenu" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Martin\Documents\GitHub\Java\Demo\resources" />
@@ -292,6 +241,12 @@
       <recent name="C:\Users\Martin\Documents\GitHub\Java\Demo\src\se\newton\martin\gui" />
       <recent name="C:\Users\Martin\Documents\GitHub\Java\Demo\images" />
       <recent name="C:\Users\Martin\Documents\GitHub\Java\Demo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="se.newton.martin.oomenu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -509,7 +464,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -524,7 +478,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13125" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17291667" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -579,14 +533,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/ovning2/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/ovning2/Hus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -798,32 +744,14 @@
     <entry file="file://$PROJECT_DIR$/Test.properties" />
     <entry file="file://$PROJECT_DIR$/Test.xml" />
     <entry file="file://$PROJECT_DIR$/Resources.properties" />
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/Main.class" />
@@ -851,27 +779,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="561">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -880,25 +802,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4156#4226#0" expanded="false" />
+            <element signature="e#4807#4842#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="953">
+          <caret line="3021" column="32" lean-forward="true" selection-start-line="3021" selection-start-column="19" selection-end-line="3021" selection-end-column="32" />
+          <folding>
+            <element signature="e#114346#114347#0" expanded="false" />
+            <element signature="e#114413#114414#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/MissingIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/JLabelAdvanced.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="119" column="46" lean-forward="true" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+        <state relative-caret-position="323">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#GUIExempel#0;class#GUIExempel#0" expanded="false" />
-            <element signature="e#3688#3758#0" expanded="false" />
-            <element signature="e#4334#4369#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>

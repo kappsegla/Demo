@@ -55,14 +55,34 @@ public class GUIExempel {
                 }
             }
         });
-    }
 
-    private void createMenuBar() {
         //Load image as icon, should be done in thread...
         ImageIcon icon = GUIHelper.createImageIcon("/smiley.gif",
                 "a pretty but meaningless splat");
-           label2.setIcon(icon);
-        //label2.setIcon(new MissingIcon());
+        //label2.setIcon(icon);
+        läggTillButton.setIcon(icon);
+
+        MissingIcon missingIcon = new MissingIcon();
+        label2.setIcon(missingIcon);
+
+        new Thread(() -> {
+            while(true) {
+                EventQueue.invokeLater( ()->{
+                missingIcon.rotate();
+                label2.repaint();});
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+
+    }
+
+    private void createMenuBar() {
+
 
         menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
@@ -83,6 +103,7 @@ public class GUIExempel {
 
         JMenuItem saveFileMenu = new JMenuItem("Save...",
                 KeyEvent.VK_S);
+
 
         saveFileMenu.getAccessibleContext().setAccessibleDescription(
                 "Save to file");
@@ -114,9 +135,9 @@ public class GUIExempel {
 
                     String temp;
                     myListModel.clear();
-                    while( (temp = inputStream.readLine()) != null ) {
-                  //      stringBuilder.append(temp);
-                  //      stringBuilder.append('\n');
+                    while ((temp = inputStream.readLine()) != null) {
+                        //      stringBuilder.append(temp);
+                        //      stringBuilder.append('\n');
                         myListModel.add(temp);
                     }
 
@@ -129,9 +150,8 @@ public class GUIExempel {
                     e1.printStackTrace();
                 } catch (IOException e1) {
                     e1.printStackTrace();
-                }
-                finally {
-                    if( inputStream != null) {
+                } finally {
+                    if (inputStream != null) {
                         try {
                             inputStream.close();
                         } catch (IOException e1) {
@@ -150,8 +170,8 @@ public class GUIExempel {
         //In response to a button click:
         int returnVal = fc.showSaveDialog(null);
 
-        if( returnVal == JFileChooser.APPROVE_OPTION){
-            new Thread(()-> {
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            new Thread(() -> {
                 File file = fc.getSelectedFile();
                 try {
                     PrintWriter outputStream = new PrintWriter(new FileWriter(file));

@@ -14,9 +14,11 @@ public class MissingIcon implements Icon {
 
     private int width = 32;
     private int height = 32;
+    private double rotation = 0;
 
     private BasicStroke stroke = new BasicStroke(4);
 
+    @Override
     public void paintIcon(Component c, Graphics g, int x, int y) {
         Graphics2D g2d = (Graphics2D) g.create();
 
@@ -29,6 +31,12 @@ public class MissingIcon implements Icon {
         g2d.setColor(Color.RED);
 
         g2d.setStroke(stroke);
+
+        //Rotate painting
+        g2d.translate(16,16);
+        g2d.rotate(rotation);
+        g2d.translate(-16,-16);
+
         g2d.drawLine(x +10, y + 10, x + width -10, y + height -10);
         g2d.drawLine(x +10, y + height -10, x + width -10, y + 10);
 
@@ -41,5 +49,9 @@ public class MissingIcon implements Icon {
 
     public int getIconHeight() {
         return height;
+    }
+
+    public void rotate(){
+        rotation += 4 * 0.01744;
     }
 }
