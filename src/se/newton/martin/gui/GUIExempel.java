@@ -1,5 +1,7 @@
 package se.newton.martin.gui;
 
+import jdk.nashorn.internal.ir.debug.JSONWriter;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -22,7 +24,7 @@ public class GUIExempel {
     private JMenuBar menuBar;
     private static JFrame frame;
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("se.newton.martin.gui.textstrings");
+   //private static ResourceBundle bundle = ResourceBundle.getBundle("se.newton.martin.gui.textstrings");
 
     public GUIExempel() {
         //Create menuBar for the application
@@ -92,7 +94,9 @@ public class GUIExempel {
         //Lägg File menu på menubar
         menuBar.add(menu);
         //Keyevent is used for navigating with alt + underscored character in windows
-        JMenuItem openFileMenu = new JMenuItem(bundle.getString("fileOpen"),
+//        JMenuItem openFileMenu = new JMenuItem(bundle.getString("fileOpen"),
+//                KeyEvent.VK_O);
+        JMenuItem openFileMenu = new JMenuItem("Open",
                 KeyEvent.VK_O);
 
         openFileMenu.getAccessibleContext().setAccessibleDescription(
