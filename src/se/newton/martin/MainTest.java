@@ -1,8 +1,7 @@
 package se.newton.martin;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class MainTest {
 
@@ -10,7 +9,7 @@ class MainTest {
     public void test1()
     {
         Main m = new Main();
-      //  assertEquals(m.getNumberOfTheBeast(), 666);
+        //assertEquals(m.getNumberOfTheBeast(), 666);
     }
 
 }

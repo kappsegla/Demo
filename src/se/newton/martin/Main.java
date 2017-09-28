@@ -41,4 +41,8 @@ public class Main {
 
         System.out.println(BMI);
     }
+
+    public short getNumberOfTheBeast() {
+        return 666;
+    }
 }
