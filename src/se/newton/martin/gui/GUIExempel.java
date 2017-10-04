@@ -1,7 +1,5 @@
 package se.newton.martin.gui;
 
-import jdk.nashorn.internal.ir.debug.JSONWriter;
-
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -11,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
-import java.util.ResourceBundle;
 
 public class GUIExempel {
     private JPanel root;
@@ -21,23 +18,25 @@ public class GUIExempel {
     private JList list1;
     private JLabel label2;
     private JTextArea textArea1;
-    private FilteredListModel myListModel;
+    private IMyListModel myListModel;
     private JMenuBar menuBar;
     private static JFrame frame;
 
-   //private static ResourceBundle bundle = ResourceBundle.getBundle("se.newton.martin.gui.textstrings");
+    //private static ResourceBundle bundle = ResourceBundle.getBundle("se.newton.martin.gui.textstrings");
 
-    public GUIExempel() {
+    public GUIExempel(IMyListModel model) {
         //Create menuBar for the application
         createMenuBar();
 
-        myListModel = new FilteredListModel();
+        myListModel = model;
+
         list1.setModel(myListModel);
         list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         läggTillButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 myListModel.add(textField1.getText());
+                myListModel.filter(textArea1.getText());
             }
         });
         taBortButton.addActionListener(new ActionListener() {
@@ -69,10 +68,11 @@ public class GUIExempel {
         label2.setIcon(missingIcon);
 
         new Thread(() -> {
-            while(true) {
-                EventQueue.invokeLater( ()->{
-                missingIcon.rotate();
-                label2.repaint();});
+            while (true) {
+                EventQueue.invokeLater(() -> {
+                    missingIcon.rotate();
+                    label2.repaint();
+                });
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -91,8 +91,6 @@ public class GUIExempel {
     }
 
     private void createMenuBar() {
-
-
         menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
         JMenu menu = new JMenu("File");
@@ -149,7 +147,7 @@ public class GUIExempel {
                     while ((temp = inputStream.readLine()) != null) {
                         //      stringBuilder.append(temp);
                         //      stringBuilder.append('\n');
-                        myListModel.add(temp);
+                            myListModel.add(temp);
                     }
 
                     //Uppdatera GUI, på EDT tråden.
@@ -198,9 +196,22 @@ public class GUIExempel {
     }
 
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(
+                    "com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+
         EventQueue.invokeLater(() -> {
             frame = new JFrame("GUIExempel");
-            frame.setContentPane(new GUIExempel().root);
+            frame.setContentPane(new GUIExempel( Factory.createListModel()).root);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(new Dimension(800, 600));
             frame.setLocationRelativeTo(null);

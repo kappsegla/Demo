@@ -1,11 +1,9 @@
 package se.newton.martin.gui;
 
 import javax.swing.*;
-import javax.swing.event.ListDataListener;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 //http://zetcode.com/tutorials/javaswingtutorial/
 
 public class GUIProgram extends JFrame {
@@ -17,7 +15,7 @@ public class GUIProgram extends JFrame {
     private JLabel label1;
     private JTextField textField;
     private JList list;
-    private MyListModel listModel;
+    private IMyListModel listModel;
 
     public GUIProgram() {
         super("Program title");
