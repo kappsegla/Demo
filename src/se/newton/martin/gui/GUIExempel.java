@@ -8,6 +8,7 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
 import java.util.ResourceBundle;
@@ -20,7 +21,7 @@ public class GUIExempel {
     private JList list1;
     private JLabel label2;
     private JTextArea textArea1;
-    private MyListModel myListModel;
+    private FilteredListModel myListModel;
     private JMenuBar menuBar;
     private static JFrame frame;
 
@@ -30,7 +31,7 @@ public class GUIExempel {
         //Create menuBar for the application
         createMenuBar();
 
-        myListModel = new MyListModel();
+        myListModel = new FilteredListModel();
         list1.setModel(myListModel);
         list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         läggTillButton.addActionListener(new ActionListener() {
@@ -81,6 +82,12 @@ public class GUIExempel {
         }).start();
 
 
+        textArea1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                myListModel.filter(textArea1.getText());
+            }
+        });
     }
 
     private void createMenuBar() {

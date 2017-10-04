@@ -14,17 +14,17 @@ import java.util.ArrayList;
 
 public class GsonTest {
     public static void main(String[] args) {
-        Document doc = null;
-        try {
-            doc = Jsoup.connect("http://gp.se/").get();
-            Elements newsHeadlines = doc.select(".teaser__body__heading");
-
-            for ( Element e: newsHeadlines ) {
-                System.out.println(e.ownText());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        Document doc = null;
+//        try {
+//            doc = Jsoup.connect("http://gp.se/").get();
+//            Elements newsHeadlines = doc.select(".teaser__body__heading");
+//
+//            for ( Element e: newsHeadlines ) {
+//                System.out.println(e.ownText());
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         Gson gson = new Gson();
 
@@ -39,6 +39,5 @@ public class GsonTest {
         ArrayList<Movie> movies1 = gson.fromJson(jsoncode, collectionType);
 
         System.out.println(movies1.get(0).getTitle());
-
     }
 }
