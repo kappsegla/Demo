@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class GUIExempel {
     private JPanel root;
@@ -188,6 +189,36 @@ public class GUIExempel {
         }).start();
     }
 
+    private void loadFile(InputStream stream){
+        new Thread(() -> {
+            //Läs in filen
+            BufferedReader inputStream = null;
+            //StringBuilder stringBuilder = new StringBuilder();
+            try {
+                inputStream = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
+
+                String temp;
+                myListModel.clear();
+                while ((temp = inputStream.readLine()) != null) {
+                    myListModel.add(temp);
+                }
+
+            } catch (FileNotFoundException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            } finally {
+                if (inputStream != null) {
+                    try {
+                        inputStream.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
     public void saveFile(ActionEvent e) {
         //Create a file chooser
         final JFileChooser fc = new JFileChooser();
@@ -212,18 +243,6 @@ public class GUIExempel {
     }
 
     public static void main(String[] args) {
-        try {
-            UIManager.setLookAndFeel(
-                    "com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
 
         EventQueue.invokeLater(() -> {
             frame = new JFrame("GUIExempel");
@@ -233,8 +252,7 @@ public class GUIExempel {
             frame.setSize(new Dimension(800, 600));
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-    //        java.net.URL fileURL = GUIExempel.class.getResource("namn.txt");
-   //         exempel.loadFile(new File(fileURL.getFile()));
+            exempel.loadFile(GUIExempel.class.getResourceAsStream("/namn.txt"));
         });
     }
 }

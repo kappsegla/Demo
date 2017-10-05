@@ -10,27 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52f0d997-483d-4e0b-a37a-7bf48c963b6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/namn.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/ThereCanBeOnlyOne.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/strategy/ContainsFilterStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/strategy/FilterStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/strategy/ShowAllFilterStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/strategy/StartsWithFilterStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/lsp/Program.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/lsp/Rectangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/lsp/Square.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/patterns/ILogger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/patterns/Logger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/patterns/NullLogger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/newton/martin/patterns/Program.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo.iml" afterPath="$PROJECT_DIR$/Demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/PointsManager.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/PointsManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/FilteredListModel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/FilteredListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/namn.txt" afterPath="$PROJECT_DIR$/resources/namn.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/IMyListModel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/IMyListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" afterPath="$PROJECT_DIR$/src/se/newton/martin/gui/MyListModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,14 +43,25 @@
       <file leaf-file-name="GUIExempel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="235" column="6" lean-forward="false" selection-start-line="235" selection-start-column="6" selection-end-line="235" selection-end-column="6" />
+            <state relative-caret-position="689">
+              <caret line="254" column="78" lean-forward="true" selection-start-line="254" selection-start-column="29" selection-end-line="254" selection-end-column="78" />
               <folding>
                 <element signature="method#createMenuBar#0;class#GUIExempel#0" expanded="false" />
                 <element signature="method#openFile#0;class#GUIExempel#0" expanded="false" />
                 <element signature="method#loadFile#0;class#GUIExempel#0" expanded="false" />
+                <element signature="method#loadFile#1;class#GUIExempel#0" expanded="false" />
                 <element signature="method#saveFile#0;class#GUIExempel#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="namn.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/namn.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="689">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/se/newton/martin/oomenu/Alt4MEnuOption.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/ovning3/Program.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/generics/Queue.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/generics/Producer.java" />
@@ -158,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.form" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/strategy/StartsWithFilterStrategy.java" />
         <option value="$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java" />
+        <option value="$PROJECT_DIR$/resources/namn.txt" />
       </list>
     </option>
   </component>
@@ -596,7 +588,7 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.209375" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.625" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5394737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -647,37 +639,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java</url>
-          <line>236</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/textstrings_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/newton/martin/Main.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/textstrings.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
@@ -1049,14 +1015,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/InputStreamReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/namn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/newton/martin/gui/GUIExempel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="235" column="6" lean-forward="false" selection-start-line="235" selection-start-column="6" selection-end-line="235" selection-end-column="6" />
+        <state relative-caret-position="689">
+          <caret line="254" column="78" lean-forward="true" selection-start-line="254" selection-start-column="29" selection-end-line="254" selection-end-column="78" />
           <folding>
             <element signature="method#createMenuBar#0;class#GUIExempel#0" expanded="false" />
             <element signature="method#openFile#0;class#GUIExempel#0" expanded="false" />
             <element signature="method#loadFile#0;class#GUIExempel#0" expanded="false" />
+            <element signature="method#loadFile#1;class#GUIExempel#0" expanded="false" />
             <element signature="method#saveFile#0;class#GUIExempel#0" expanded="false" />
           </folding>
         </state>
