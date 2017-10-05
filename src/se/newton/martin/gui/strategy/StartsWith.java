@@ -1,10 +1,10 @@
 package se.newton.martin.gui.strategy;
 
-public class StartsWithFilterStrategy implements FilterStrategy {
+public class StartsWith implements FilterStrategy {
 
     private String filtertext;
 
-    public StartsWithFilterStrategy(String filtertext){
+    public StartsWith(String filtertext){
         this.filtertext = filtertext;
     }
 

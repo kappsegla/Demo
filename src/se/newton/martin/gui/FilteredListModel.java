@@ -1,14 +1,14 @@
 package se.newton.martin.gui;
 
 import se.newton.martin.gui.strategy.FilterStrategy;
-import se.newton.martin.gui.strategy.ShowAllFilterStrategy;
+import se.newton.martin.gui.strategy.ShowAll;
 
 import java.util.ArrayList;
 
 public class FilteredListModel extends MyListModel {
 
     ArrayList<String> model = new ArrayList<>();
-    FilterStrategy filter = new ShowAllFilterStrategy();
+    FilterStrategy filter = new ShowAll();
 
     /*public void filter(String filterText) {
 

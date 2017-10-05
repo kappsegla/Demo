@@ -1,8 +1,6 @@
 package se.newton.martin.gui;
 
-import se.newton.martin.gui.strategy.ContainsFilterStrategy;
-import se.newton.martin.gui.strategy.ShowAllFilterStrategy;
-import se.newton.martin.gui.strategy.StartsWithFilterStrategy;
+import se.newton.martin.gui.strategy.*;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -22,8 +20,9 @@ public class GUIExempel {
     private JButton taBortButton;
     private JList list1;
     private JLabel label2;
-    private JTextArea textArea1;
     private JCheckBox startsWithCheckBox;
+    private JTextField textField2;
+    private JCheckBox endsWithCheckBox;
     private IMyListModel myListModel;
     private JMenuBar menuBar;
     private static JFrame frame;
@@ -88,18 +87,19 @@ public class GUIExempel {
         }).start();
 
 
-        textArea1.addKeyListener(new KeyAdapter() {
+        textField2.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                if( textArea1.getText().isEmpty())
-                    myListModel.filter(new ShowAllFilterStrategy());
-                else if( startsWithCheckBox.isSelected()) {
-                    myListModel.filter(new StartsWithFilterStrategy(textArea1.getText()));
-                }
+                if( textField2.getText().isEmpty())
+                    myListModel.filter(new ShowAll());
+                else if(startsWithCheckBox.isSelected() && endsWithCheckBox.isSelected())
+                    myListModel.filter(new CombinedOr(new StartsWith(textField2.getText()),new EndsWith(textField2.getText())));
+                else if( startsWithCheckBox.isSelected())
+                    myListModel.filter(new StartsWith(textField2.getText()));
+                else if( endsWithCheckBox.isSelected())
+                    myListModel.filter(new EndsWith(textField2.getText()));
                 else
-                    myListModel.filter(new ContainsFilterStrategy(textArea1.getText()));
-
-                //myListModel.filter(textArea1.getText());
+                    myListModel.filter(new Contains(textField2.getText()));
             }
         });
     }

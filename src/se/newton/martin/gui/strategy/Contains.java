@@ -1,10 +1,10 @@
 package se.newton.martin.gui.strategy;
 
-public class ContainsFilterStrategy implements FilterStrategy {
+public class Contains implements FilterStrategy {
 
     private String filtertext;
 
-    public ContainsFilterStrategy(String filtertext){
+    public Contains(String filtertext){
         this.filtertext = filtertext;
     }
 
