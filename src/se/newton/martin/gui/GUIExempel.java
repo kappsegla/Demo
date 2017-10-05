@@ -131,45 +131,48 @@ public class GUIExempel {
         int returnVal = fc.showOpenDialog(frame);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = fc.getSelectedFile();
+            loadFile(file);
+        }
+    }
 
-            //Filhantering tar lång tid och måste utföras i en egen bakgrundstråd.
-            //Kan även göras med SwingWorker
-            // https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html
-            new Thread(() -> {
-                //Läs in filen
-                BufferedReader inputStream = null;
-                //StringBuilder stringBuilder = new StringBuilder();
-                try {
-                    inputStream = new BufferedReader(new FileReader(file));
+    private void loadFile(File file) {
+        //Filhantering tar lång tid och måste utföras i en egen bakgrundstråd.
+        //Kan även göras med SwingWorker
+        // https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html
+        new Thread(() -> {
+            //Läs in filen
+            BufferedReader inputStream = null;
+            //StringBuilder stringBuilder = new StringBuilder();
+            try {
+                inputStream = new BufferedReader(new FileReader(file));
 
-                    String temp;
-                    myListModel.clear();
-                    while ((temp = inputStream.readLine()) != null) {
-                        //      stringBuilder.append(temp);
-                        //      stringBuilder.append('\n');
-                            myListModel.add(temp);
-                    }
+                String temp;
+                myListModel.clear();
+                while ((temp = inputStream.readLine()) != null) {
+                    //      stringBuilder.append(temp);
+                    //      stringBuilder.append('\n');
+                        myListModel.add(temp);
+                }
 
-                    //Uppdatera GUI, på EDT tråden.
+                //Uppdatera GUI, på EDT tråden.
 //                    EventQueue.invokeLater(() -> {
 //                        //Kod för att uppdatera grafiska gränssnittet
 //                        textArea1.setText(stringBuilder.toString());
 //                    });
-                } catch (FileNotFoundException e1) {
-                    e1.printStackTrace();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                } finally {
-                    if (inputStream != null) {
-                        try {
-                            inputStream.close();
-                        } catch (IOException e1) {
-                            e1.printStackTrace();
-                        }
+            } catch (FileNotFoundException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            } finally {
+                if (inputStream != null) {
+                    try {
+                        inputStream.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
                     }
                 }
-            }).start();
-        }
+            }
+        }).start();
     }
 
     public void saveFile(ActionEvent e) {
@@ -211,11 +214,13 @@ public class GUIExempel {
 
         EventQueue.invokeLater(() -> {
             frame = new JFrame("GUIExempel");
-            frame.setContentPane(new GUIExempel( Factory.createListModel()).root);
+            GUIExempel exempel = new GUIExempel( Factory.createListModel());
+            frame.setContentPane(exempel.root);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(new Dimension(800, 600));
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
+        //    exempel.loadFile(new File("C:\\Users\\Martin\\OneDrive\\Documents\\namn.txt"));
         });
     }
 }

@@ -4,17 +4,15 @@ import java.util.ArrayList;
 
 public class FilteredListModel extends MyListModel {
 
-    ArrayList<String> backupList = new ArrayList<>();
-    boolean filtering;
+    ArrayList<String> model = new ArrayList<>();
+    String filter;
 
-    /**
-     * Call this function to filter the available data.
-     * Filter will try to find the requested text anywhere in the stored strings
-     * and will show all posts with a match.
-     *
-     * @param filterText Text to search for. If empty or null all posts will be shown.
-     */
-    public void filter(String filterText) {
+    /*public void filter(String filterText) {
+
+        //Alternativa lösningar att undersöka..
+//        listItems.removeIf(s -> !s.contains(filterText));
+
+
 
         //Återställ listan till ofiltrerad version
         for (String s : backupList) {
@@ -37,7 +35,7 @@ public class FilteredListModel extends MyListModel {
                 super.remove(i);
             }
         }
-    }
+    }*/
 //    public void filter(String filterText){
 //
 //        if( !filtering ) {
@@ -77,18 +75,49 @@ public class FilteredListModel extends MyListModel {
 //            }
 //        }
 //    }
+    public void filter(String text) {
+        filter = text;
+        super.clear();  //Rensar hela listan, prestandan?
 
+        for (String o : model) {
+            if (text == null || text.isEmpty() || o.contains(filter) ) {
+                    super.add(o);
+            }
+        }
+
+//        for (String o : model) {
+//            if (text == null || text.isEmpty()) {
+//                if ( !listItems.contains(o)) {
+//                    super.add(o);
+//                }
+//            } else if (!o.contains(filter)) {
+//                if (listItems.contains(o)) {
+//                    super.remove(listItems.indexOf(o));
+//                }
+//            } else {
+//                if (!listItems.contains(o)) {
+//                    super.add(o);
+//                }
+//            }
+//        }
+    }
 
     @Override
     public void add(String text) {
-        super.add(text);
-        listItems.sort((o1, o2) -> o1.compareToIgnoreCase(o2));
+        model.add(text);
+        filter(filter);
     }
 
     @Override
     public void remove(int index) {
         String obj = getElementAt(index);
-        super.remove(index);
-        backupList.remove(obj);
+        model.remove(obj);
+        filter(filter);
+    }
+
+    @Override
+    public void clear() {
+        model.clear();
+        filter(filter);
     }
 }
