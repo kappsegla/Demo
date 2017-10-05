@@ -1,5 +1,9 @@
 package se.newton.martin.gui;
 
+import se.newton.martin.gui.strategy.ContainsFilterStrategy;
+import se.newton.martin.gui.strategy.ShowAllFilterStrategy;
+import se.newton.martin.gui.strategy.StartsWithFilterStrategy;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -18,6 +22,7 @@ public class GUIExempel {
     private JList list1;
     private JLabel label2;
     private JTextArea textArea1;
+    private JCheckBox startsWithCheckBox;
     private IMyListModel myListModel;
     private JMenuBar menuBar;
     private static JFrame frame;
@@ -36,7 +41,7 @@ public class GUIExempel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 myListModel.add(textField1.getText());
-                myListModel.filter(textArea1.getText());
+                //myListModel.filter(textArea1.getText());
             }
         });
         taBortButton.addActionListener(new ActionListener() {
@@ -85,7 +90,15 @@ public class GUIExempel {
         textArea1.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                myListModel.filter(textArea1.getText());
+                if( textArea1.getText().isEmpty())
+                    myListModel.filter(new ShowAllFilterStrategy());
+                else if( startsWithCheckBox.isSelected()) {
+                    myListModel.filter(new StartsWithFilterStrategy(textArea1.getText()));
+                }
+                else
+                    myListModel.filter(new ContainsFilterStrategy(textArea1.getText()));
+
+                //myListModel.filter(textArea1.getText());
             }
         });
     }
@@ -220,7 +233,8 @@ public class GUIExempel {
             frame.setSize(new Dimension(800, 600));
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-        //    exempel.loadFile(new File("C:\\Users\\Martin\\OneDrive\\Documents\\namn.txt"));
+    //        java.net.URL fileURL = GUIExempel.class.getResource("namn.txt");
+   //         exempel.loadFile(new File(fileURL.getFile()));
         });
     }
 }

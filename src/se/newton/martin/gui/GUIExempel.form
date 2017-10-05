@@ -38,7 +38,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <grid id="c6709" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="8" vgap="10">
+                  <grid id="c6709" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="8" vgap="10">
                     <margin top="20" left="20" bottom="20" right="20"/>
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="3" use-parent-layout="false"/>
@@ -110,6 +110,14 @@
                           <enabled value="true"/>
                           <testing value="true"/>
                           <text value="Test"/>
+                        </properties>
+                      </component>
+                      <component id="34bc0" class="javax.swing.JCheckBox" binding="startsWithCheckBox" default-binding="true">
+                        <constraints>
+                          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="StartsWith"/>
                         </properties>
                       </component>
                     </children>

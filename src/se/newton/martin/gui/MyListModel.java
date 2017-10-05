@@ -1,6 +1,7 @@
 package se.newton.martin.gui;
 
-import javax.swing.*;
+import se.newton.martin.gui.strategy.FilterStrategy;
+
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class MyListModel implements IMyListModel {
     }
 
     @Override
-    public void filter(String text) {
+    public void filter(FilterStrategy strategy) {
 
     }
 }

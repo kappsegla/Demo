@@ -1,11 +1,14 @@
 package se.newton.martin.gui;
 
+import se.newton.martin.gui.strategy.FilterStrategy;
+import se.newton.martin.gui.strategy.ShowAllFilterStrategy;
+
 import java.util.ArrayList;
 
 public class FilteredListModel extends MyListModel {
 
     ArrayList<String> model = new ArrayList<>();
-    String filter;
+    FilterStrategy filter = new ShowAllFilterStrategy();
 
     /*public void filter(String filterText) {
 
@@ -75,12 +78,13 @@ public class FilteredListModel extends MyListModel {
 //            }
 //        }
 //    }
-    public void filter(String text) {
-        filter = text;
+    public void filter(FilterStrategy filterStrategy) {
+        filter = filterStrategy;
         super.clear();  //Rensar hela listan, prestandan?
 
         for (String o : model) {
-            if (text == null || text.isEmpty() || o.contains(filter) ) {
+            //if (text == null || text.isEmpty() || o.contains(filter) ) {
+            if( filterStrategy.filter(o)){
                     super.add(o);
             }
         }

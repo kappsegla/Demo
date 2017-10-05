@@ -1,5 +1,7 @@
 package se.newton.martin.gui;
 
+import se.newton.martin.gui.strategy.FilterStrategy;
+
 import javax.swing.*;
 
 public interface IMyListModel extends ListModel<String> {
@@ -11,5 +13,5 @@ public interface IMyListModel extends ListModel<String> {
 
     void clear();
 
-    void filter(String text);
+    void filter(FilterStrategy strategy);
 }

@@ -32,7 +32,6 @@ public class PointsManager {
 
         System.out.println("Line length: " + line.length());
 
-
         /*
         System.out.println( point1.distanceTo(point4) );
         System.out.println( point1.distanceTo(point5) );
